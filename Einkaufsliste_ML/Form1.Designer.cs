@@ -32,9 +32,6 @@
             label1 = new Label();
             textBox1 = new TextBox();
             dataGridView1 = new DataGridView();
-            articleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            categoryDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            valueDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             PredictionTypeBindingSource = new BindingSource(components);
             dataSet1 = new DataSet1();
             category_saveButton = new Button();
@@ -43,6 +40,9 @@
             label3 = new Label();
             categorieTextBox = new TextBox();
             category_deleteButton = new Button();
+            categoryDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            articleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            valueDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PredictionTypeBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataSet1).BeginInit();
@@ -70,30 +70,12 @@
             // 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { articleDataGridViewTextBoxColumn, categoryDataGridViewTextBoxColumn, valueDataGridViewTextBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { categoryDataGridViewTextBoxColumn, articleDataGridViewTextBoxColumn, valueDataGridViewTextBoxColumn });
             dataGridView1.DataSource = PredictionTypeBindingSource;
             dataGridView1.Location = new Point(94, 110);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(381, 328);
             dataGridView1.TabIndex = 2;
-            // 
-            // articleDataGridViewTextBoxColumn
-            // 
-            articleDataGridViewTextBoxColumn.DataPropertyName = "Article";
-            articleDataGridViewTextBoxColumn.HeaderText = "Article";
-            articleDataGridViewTextBoxColumn.Name = "articleDataGridViewTextBoxColumn";
-            // 
-            // categoryDataGridViewTextBoxColumn
-            // 
-            categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
-            categoryDataGridViewTextBoxColumn.HeaderText = "Category";
-            categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            // 
-            // valueDataGridViewTextBoxColumn
-            // 
-            valueDataGridViewTextBoxColumn.DataPropertyName = "Value";
-            valueDataGridViewTextBoxColumn.HeaderText = "Value";
-            valueDataGridViewTextBoxColumn.Name = "valueDataGridViewTextBoxColumn";
             // 
             // PredictionTypeBindingSource
             // 
@@ -161,6 +143,24 @@
             category_deleteButton.UseVisualStyleBackColor = true;
             category_deleteButton.Click += category_deleteButton_Click;
             // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
+            categoryDataGridViewTextBoxColumn.HeaderText = "Category";
+            categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            // 
+            // articleDataGridViewTextBoxColumn
+            // 
+            articleDataGridViewTextBoxColumn.DataPropertyName = "Article";
+            articleDataGridViewTextBoxColumn.HeaderText = "Article";
+            articleDataGridViewTextBoxColumn.Name = "articleDataGridViewTextBoxColumn";
+            // 
+            // valueDataGridViewTextBoxColumn
+            // 
+            valueDataGridViewTextBoxColumn.DataPropertyName = "Value";
+            valueDataGridViewTextBoxColumn.HeaderText = "Value";
+            valueDataGridViewTextBoxColumn.Name = "valueDataGridViewTextBoxColumn";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -197,9 +197,9 @@
         private TextBox categorieTextBox;
         private BindingSource PredictionTypeBindingSource;
         private DataSet1 dataSet1;
-        private DataGridViewTextBoxColumn articleDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn valueDataGridViewTextBoxColumn;
         private Button category_deleteButton;
+        private DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn articleDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn valueDataGridViewTextBoxColumn;
     }
 }

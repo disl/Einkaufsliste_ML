@@ -7,6 +7,8 @@ namespace Einkaufsliste_ML
     public partial class Form1 : Form
     {
         private IEnumerable<string> m_categories_in_cache;
+        private List<Color> m_colors=new();
+        private bool m_is_dark_theme=true;
 
         public Form1()
         {
@@ -19,6 +21,37 @@ namespace Einkaufsliste_ML
             BlobCache.ApplicationName = appName;
 
             m_categories_in_cache = await BlobCache.LocalMachine.GetAllKeys();
+
+            if(m_is_dark_theme)
+            {
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.neongr);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+                m_colors.Add(Color.LightYellow);
+            }
+            else
+            {
+                
+
+            }
+                
         }
 
         private async void textBox1_KeyDown(object sender, KeyEventArgs e)
@@ -48,11 +81,16 @@ namespace Einkaufsliste_ML
                     {
                         var predicted_item = sortedScoresWithLabel.FirstOrDefault();
 
-                        dataSet1.PredictionType.AddPredictionTypeRow(s, predicted_item.Key, Convert.ToDecimal(predicted_item.Value));
+                        dataSet1.PredictionType.AddPredictionTypeRow(s, predicted_item.Key, Convert.ToDecimal(predicted_item.Value), GetColor(predicted_item.Key));
                     }
                 }
                 ApplyLocalTypes();
             }
+        }
+
+        private object GetColor(string key)
+        {
+           
         }
 
         private async void ApplyLocalTypes()
