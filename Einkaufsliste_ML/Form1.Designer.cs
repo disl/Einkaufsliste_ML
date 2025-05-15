@@ -40,6 +40,7 @@
             label3 = new Label();
             categorieTextBox = new TextBox();
             category_deleteButton = new Button();
+            CategorieColumn = new DataGridViewTextBoxColumn();
             categoryDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             articleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             valueDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -63,14 +64,17 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(381, 23);
             textBox1.TabIndex = 1;
-            textBox1.Text = "brot;apfel;bla";
+            textBox1.Text = "brot;apfel;bla;birne 0.5;weintrauben 3 kg;fleisch 3 kg;bratwurst";
             textBox1.KeyDown += textBox1_KeyDown;
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { categoryDataGridViewTextBoxColumn, articleDataGridViewTextBoxColumn, valueDataGridViewTextBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CategorieColumn, categoryDataGridViewTextBoxColumn, articleDataGridViewTextBoxColumn, valueDataGridViewTextBoxColumn });
             dataGridView1.DataSource = PredictionTypeBindingSource;
             dataGridView1.Location = new Point(94, 110);
             dataGridView1.Name = "dataGridView1";
@@ -81,6 +85,7 @@
             // 
             PredictionTypeBindingSource.DataMember = "PredictionType";
             PredictionTypeBindingSource.DataSource = dataSet1;
+            PredictionTypeBindingSource.Sort = "Category";
             // 
             // dataSet1
             // 
@@ -143,6 +148,15 @@
             category_deleteButton.UseVisualStyleBackColor = true;
             category_deleteButton.Click += category_deleteButton_Click;
             // 
+            // CategorieColumn
+            // 
+            CategorieColumn.FillWeight = 7F;
+            CategorieColumn.HeaderText = "";
+            CategorieColumn.Name = "CategorieColumn";
+            CategorieColumn.ReadOnly = true;
+            CategorieColumn.Resizable = DataGridViewTriState.True;
+            CategorieColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
             // categoryDataGridViewTextBoxColumn
             // 
             categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
@@ -198,6 +212,7 @@
         private BindingSource PredictionTypeBindingSource;
         private DataSet1 dataSet1;
         private Button category_deleteButton;
+        private DataGridViewTextBoxColumn CategorieColumn;
         private DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn articleDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn valueDataGridViewTextBoxColumn;

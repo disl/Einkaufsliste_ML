@@ -9,16 +9,15 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="PredictionType" msprop:Generator_RowEvHandlerName="PredictionTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="PredictionTypeRowDeleted" msprop:Generator_RowDeletingName="PredictionTypeRowDeleting" msprop:Generator_RowEvArgName="PredictionTypeRowChangeEvent" msprop:Generator_TablePropName="PredictionType" msprop:Generator_RowChangedName="PredictionTypeRowChanged" msprop:Generator_RowChangingName="PredictionTypeRowChanging" msprop:Generator_TableClassName="PredictionTypeDataTable" msprop:Generator_RowClassName="PredictionTypeRow" msprop:Generator_TableVarName="tablePredictionType" msprop:Generator_UserTableName="PredictionType">
+        <xs:element name="PredictionType" msprop:Generator_RowClassName="PredictionTypeRow" msprop:Generator_RowEvHandlerName="PredictionTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="PredictionTypeRowDeleted" msprop:Generator_RowDeletingName="PredictionTypeRowDeleting" msprop:Generator_RowEvArgName="PredictionTypeRowChangeEvent" msprop:Generator_TablePropName="PredictionType" msprop:Generator_RowChangedName="PredictionTypeRowChanged" msprop:Generator_UserTableName="PredictionType" msprop:Generator_RowChangingName="PredictionTypeRowChanging" msprop:Generator_TableClassName="PredictionTypeDataTable" msprop:Generator_TableVarName="tablePredictionType">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Article" msprop:Generator_ColumnPropNameInRow="Article" msprop:Generator_ColumnPropNameInTable="ArticleColumn" msprop:Generator_ColumnVarNameInTable="columnArticle" msprop:Generator_UserColumnName="Article" type="xs:string" />
-              <xs:element name="Category" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_UserColumnName="Category" type="xs:string" minOccurs="0" />
-              <xs:element name="Value" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_UserColumnName="Value" type="xs:decimal" minOccurs="0" />
-              <xs:element name="Color" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_ColumnVarNameInTable="columnColor" msprop:Generator_UserColumnName="Color" type="xs:string" minOccurs="0" />
+              <xs:element name="Article" msprop:Generator_UserColumnName="Article" msprop:Generator_ColumnPropNameInTable="ArticleColumn" msprop:Generator_ColumnPropNameInRow="Article" msprop:Generator_ColumnVarNameInTable="columnArticle" type="xs:string" />
+              <xs:element name="Category" msprop:Generator_UserColumnName="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" type="xs:string" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_UserColumnName="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnVarNameInTable="columnValue" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

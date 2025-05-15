@@ -287,8 +287,6 @@ namespace Einkaufsliste_ML {
             
             private global::System.Data.DataColumn columnValue;
             
-            private global::System.Data.DataColumn columnColor;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public PredictionTypeDataTable() {
@@ -350,14 +348,6 @@ namespace Einkaufsliste_ML {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ColorColumn {
-                get {
-                    return this.columnColor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -393,13 +383,12 @@ namespace Einkaufsliste_ML {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PredictionTypeRow AddPredictionTypeRow(string Article, string Category, decimal Value, string Color) {
+            public PredictionTypeRow AddPredictionTypeRow(string Article, string Category, decimal Value) {
                 PredictionTypeRow rowPredictionTypeRow = ((PredictionTypeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Article,
                         Category,
-                        Value,
-                        Color};
+                        Value};
                 rowPredictionTypeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPredictionTypeRow);
                 return rowPredictionTypeRow;
@@ -432,7 +421,6 @@ namespace Einkaufsliste_ML {
                 this.columnArticle = base.Columns["Article"];
                 this.columnCategory = base.Columns["Category"];
                 this.columnValue = base.Columns["Value"];
-                this.columnColor = base.Columns["Color"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -444,8 +432,6 @@ namespace Einkaufsliste_ML {
                 base.Columns.Add(this.columnCategory);
                 this.columnValue = new global::System.Data.DataColumn("Value", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnValue);
-                this.columnColor = new global::System.Data.DataColumn("Color", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnColor);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("PredictionTypeKey1", new global::System.Data.DataColumn[] {
                                 this.columnArticle}, true));
                 this.columnArticle.AllowDBNull = false;
@@ -635,22 +621,6 @@ namespace Einkaufsliste_ML {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Color {
-                get {
-                    try {
-                        return ((string)(this[this.tablePredictionType.ColorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte Color in Tabelle PredictionType ist DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePredictionType.ColorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsCategoryNull() {
                 return this.IsNull(this.tablePredictionType.CategoryColumn);
             }
@@ -671,18 +641,6 @@ namespace Einkaufsliste_ML {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetValueNull() {
                 this[this.tablePredictionType.ValueColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsColorNull() {
-                return this.IsNull(this.tablePredictionType.ColorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetColorNull() {
-                this[this.tablePredictionType.ColorColumn] = global::System.Convert.DBNull;
             }
         }
         
