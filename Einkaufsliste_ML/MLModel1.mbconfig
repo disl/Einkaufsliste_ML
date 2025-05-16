@@ -42,11 +42,11 @@
       {
         "Version": 1,
         "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.6979375703113424,
-        "RuntimeInSeconds": 4.302,
+        "TrainerName": "LbfgsLogisticRegressionOva",
+        "Score": 0.69725280330199924,
+        "RuntimeInSeconds": 4.582,
         "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e2 * e7 * e10",
+          "_SCHEMA_": "e0 * e1 * e2 * e6 * e10",
           "e0": {
             "InputColumnName": "col0",
             "OutputColumnName": "col0"
@@ -66,7 +66,7 @@
             "InputColumnName": "col1",
             "AddKeyValueAnnotationsAsText": false
           },
-          "e7": {
+          "e6": {
             "L1Regularization": 1.0,
             "L2Regularization": 1.0,
             "LabelColumnName": "col1",
@@ -79,7 +79,7 @@
         "Type": "Trial",
         "TrainerName": "FastTreeOva",
         "Score": 0.4265975298416862,
-        "RuntimeInSeconds": 23.821,
+        "RuntimeInSeconds": 24.087,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e3 * e10",
           "e0": {
@@ -111,48 +111,6 @@
             "LabelColumnName": "col1",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
-          }
-        }
-      },
-      {
-        "Version": 1,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.39426964407701554,
-        "RuntimeInSeconds": 0.88,
-        "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e2 * e5 * e10",
-          "e0": {
-            "InputColumnName": "col0",
-            "OutputColumnName": "col0"
-          },
-          "e1": {
-            "InputColumnNames": [
-              "col0"
-            ],
-            "OutputColumnName": "Features"
-          },
-          "e10": {
-            "OutputColumnName": "PredictedLabel",
-            "InputColumnName": "PredictedLabel"
-          },
-          "e2": {
-            "OutputColumnName": "col1",
-            "InputColumnName": "col1",
-            "AddKeyValueAnnotationsAsText": false
-          },
-          "e5": {
-            "NumberOfLeaves": 4,
-            "MinimumExampleCountPerLeaf": 20,
-            "LearningRate": 1.0,
-            "NumberOfTrees": 4,
-            "SubsampleFraction": 1.0,
-            "MaximumBinCountPerFeature": 254,
-            "FeatureFraction": 1.0,
-            "L1Regularization": 2E-10,
-            "L2Regularization": 1.0,
-            "LabelColumnName": "col1",
-            "FeatureColumnName": "Features"
           }
         }
       }
